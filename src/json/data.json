@@ -1,0 +1,34 @@
+[
+    {   
+        "id": 1,
+        "name": "Buzo",
+        "price": 3500,
+        "discount": false,
+        "size": ["S", "M"],
+        "color": ["Blanco", "Negro"]
+    },
+    {
+        "id": 2,
+        "name": "Remera",
+        "price": 2350,
+        "discount": true,
+        "size": ["M"],
+        "color": ["Azul", "Rojo"]
+    },
+    {
+        "id": 3,
+        "name": "Pantalon",
+        "price": 3000,
+        "discount": false,
+        "size": ["S"],
+        "color": ["Rojo", "Blanco"]
+    },
+    {
+        "id": 4,
+        "name": "Campera",
+        "price": 4500,
+        "discount": true,
+        "size": ["S", "M"],
+        "color": ["Rojo", "Blanco", "Azul"]
+    }
+]
