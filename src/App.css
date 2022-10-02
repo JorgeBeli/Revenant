@@ -55,6 +55,18 @@ body {
   height: 100%;
   object-fit: cover;
 }
+.products .product__card .button__card button {
+  padding: 0.5rem;
+  border-radius: 25px;
+  color: #b0b0b0;
+  background-color: #494949;
+  border: none;
+  transition: all 0.25s ease-in-out;
+}
+.products .product__card .button__card button:hover {
+  cursor: pointer;
+  background-color: #656565;
+}
 
 .intro__wraper .intro__text {
   background-image: url("https://cdn.pixabay.com/photo/2017/07/31/14/55/black-and-white-2558273_1280.jpg");
@@ -127,6 +139,34 @@ body {
   width: 100%;
   flex-shrink: 0;
   flex-grow: 1;
+}
+
+.location__container .locations__wraper .location__norcenter, .location__container .locations__wraper .location__unicenter {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 45px;
+  background-color: #505050;
+}
+.location__container .locations__wraper .location__norcenter iframe, .location__container .locations__wraper .location__unicenter iframe {
+  width: 45vw;
+  height: 50vh;
+  border-radius: 22.5px;
+  border: none;
+}
+.location__container .locations__wraper .location__norcenter .norcenter__text, .location__container .locations__wraper .location__unicenter .norcenter__text, .location__container .locations__wraper .location__unicenter .unicenter__text {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.location__container .locations__wraper .location__unicenter {
+  flex-direction: row-reverse;
+}
+.location__container .locations__wraper .location__unicenter .unicenter__text {
+  text-align: right;
 }
 
 /*# sourceMappingURL=App.css.map */

@@ -8,7 +8,7 @@ const navbar = () =>{
                 <ul>
                     <li><Link to={'/products'}>Products</Link></li>
                     <li><a href='#'>About Us</a></li>
-                    <li><a href='#'>Location</a></li>
+                    <li><Link to={'/location'}>Location</Link></li>
                 </ul>
             </div>
             <div className='logo__nav'>

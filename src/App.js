@@ -3,6 +3,8 @@ import Navbar from './components/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Products from './components/Products';
 import Intro from './components/IntroIndex';
+import Location from './components/Location';
+import IndividualProduct from './components/ProductSolo';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
           <Routes>
             <Route path='/' element={<Intro/>} />
             <Route path='/products' element={<Products/>}/>
+            <Route path='/location' element={<Location/>}></Route>
+            <Route path='/products/item/:id' element={<IndividualProduct/>}></Route>
           </Routes>
         </BrowserRouter>
       </header>
