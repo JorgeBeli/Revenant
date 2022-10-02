@@ -5,7 +5,8 @@
         "price": 3500,
         "discount": false,
         "size": ["S", "M"],
-        "color": ["Blanco", "Negro"]
+        "color": ["Blanco", "Negro"],
+        "img": "https://www.hippotool.com/placeholder/400x500/6b6868/a0a0a0"
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "price": 2350,
         "discount": true,
         "size": ["M"],
-        "color": ["Azul", "Rojo"]
+        "color": ["Azul", "Rojo"],
+        "img": "https://www.hippotool.com/placeholder/400x500/6b6868/a0a0a0"
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "price": 3000,
         "discount": false,
         "size": ["S"],
-        "color": ["Rojo", "Blanco"]
+        "color": ["Rojo", "Blanco"],
+        "img": "https://www.hippotool.com/placeholder/400x500/6b6868/a0a0a0"
     },
     {
         "id": 4,
@@ -29,6 +32,7 @@
         "price": 4500,
         "discount": true,
         "size": ["S", "M"],
-        "color": ["Rojo", "Blanco", "Azul"]
+        "color": ["Rojo", "Blanco", "Azul"],
+        "img": "https://www.hippotool.com/placeholder/400x500/6b6868/a0a0a0"
     }
 ]
