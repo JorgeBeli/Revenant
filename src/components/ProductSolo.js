@@ -21,17 +21,21 @@ const IndividualProduct = () =>{
     }
 
     let {name, price, size, color, img} = {...item}
-
+    
     return(
-        <div>
-            <h2>{name}</h2>
-            <div>
+        <div className="individual__card">
+            <div className="individual__img">
                 <img src={img} alt={name}></img>
             </div>
-            <div>
-                <p>${price}</p>
-                <p>Sizes: {size}</p>
-                <p>Colors: {color}</p>
+            <div className="individual__text">
+                <div className="text__title">
+                    <h2>{name}</h2>
+                </div>
+                <div className="text__info">
+                    <p>${price}</p>
+                    <p>Sizes: {size?.join(', ')}</p>
+                    <p>Colors: {color?.join(', ')}</p>
+                </div>
             </div>
         </div>
     )

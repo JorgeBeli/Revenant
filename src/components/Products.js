@@ -10,7 +10,6 @@ const Products = () => {
                 {products.map( item => <ProductsCards key={item.id} {...item}></ProductsCards>)}
             </div>
         </div>
-
     )
 }
 
