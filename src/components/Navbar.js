@@ -7,7 +7,7 @@ const navbar = () =>{
             <div className='options__nav-left'>
                 <ul>
                     <li><Link to={'/products'}>Products</Link></li>
-                    <li><a href='#'>About Us</a></li>
+                    <li><Link to={'/aboutUs'}>About Us</Link></li>
                     <li><Link to={'/location'}>Location</Link></li>
                 </ul>
             </div>
@@ -16,8 +16,8 @@ const navbar = () =>{
             </div>
             <div className='options__nav-right'>
                 <ul>
-                    <li><a href='#'><CartWidget/></a></li>
-                    <li><a href='#'><i className="fa-solid fa-user"></i></a></li>
+                    <li><Link to={'/cart'}><CartWidget/></Link></li>
+                    <li><Link to={'/user'}><i className="fa-solid fa-user"></i></Link></li>
                 </ul>
             </div>
         </nav>
