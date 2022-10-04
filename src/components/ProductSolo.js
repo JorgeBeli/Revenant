@@ -35,6 +35,7 @@ const IndividualProduct = () =>{
                     <p>${price}</p>
                     <p>Sizes: {size?.join(', ')}</p>
                     <p>Colors: {color?.join(', ')}</p>
+                    <button>Add to cart</button>
                 </div>
             </div>
         </div>
