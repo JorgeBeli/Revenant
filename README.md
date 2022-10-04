@@ -1,1 +1,1 @@
-Primer proyecti utilizando React Js :)
+Primer proyecto utilizando React Js :)
