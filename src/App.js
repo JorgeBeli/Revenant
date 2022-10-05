@@ -12,15 +12,15 @@ function App() {
       <header className='navbar__wraper'>
         <BrowserRouter>
           <Navbar/>
-          <Routes>
-            <Route path='/' element={<Intro/>} />
-            <Route path='/products' element={<Products/>}/>
-            <Route path='/products/item/:id' element={<IndividualProduct/>}></Route>
-            <Route path='/aboutUs' element={<Intro/>}></Route>
-            <Route path='/location' element={<Location/>}></Route>
-            <Route path='/cart' element={<Intro/>}></Route>
-            <Route path='/user' element={<Intro/>}></Route>
-          </Routes>
+            <Routes>
+              <Route path='/' element={<Intro/>} />
+              <Route path='/products' element={<Products/>}/>
+              <Route path='/products/item/:id' element={<IndividualProduct/>}></Route>
+              <Route path='/aboutUs' element={<Intro/>}></Route>
+              <Route path='/location' element={<Location/>}></Route>
+              <Route path='/cart' element={<Intro/>}></Route>
+              <Route path='/user' element={<Intro/>}></Route>
+            </Routes>
         </BrowserRouter>
       </header>
       <main>
