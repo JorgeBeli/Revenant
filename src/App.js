@@ -5,6 +5,7 @@ import Products from './components/Products';
 import Intro from './components/IntroIndex';
 import Location from './components/Location';
 import IndividualProduct from './components/ProductSolo';
+import Error from './components/error';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path='/location' element={<Location/>}></Route>
               <Route path='/cart' element={<Intro/>}></Route>
               <Route path='/user' element={<Intro/>}></Route>
+              <Route path='*' element={<Error/>}></Route>
             </Routes>
         </BrowserRouter>
       </header>
