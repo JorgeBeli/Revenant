@@ -15,8 +15,6 @@ const ProductsCards = ({id,name,price,size,color,img}) =>{
                 <div className="colors__wraper">
                     <p>Colores: {color.join(', ')}</p>
                 </div>
-                <div className="button__card">
-                </div>
             </div>
         </Link>
     )

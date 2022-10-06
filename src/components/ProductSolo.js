@@ -1,11 +1,19 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { useProducts } from "../context/CartContext"
 import products from '../json/data.json'
 
 const IndividualProduct = () =>{
+
+    const { add } = useProducts()
+    
     const {id : itemId} = useParams()
     const [item, setItem] = useState({})
 
+    const addHandler = () =>{
+        add({...item})
+    }
+    
     useEffect(() =>{
         getDataProduct().then( res =>{
             setItem(res)
@@ -35,7 +43,7 @@ const IndividualProduct = () =>{
                     <p>${price}</p>
                     <p>Sizes: {size?.join(', ')}</p>
                     <p>Colors: {color?.join(', ')}</p>
-                    <button>Add to cart</button>
+                    <button onClick={addHandler}>Add to Cart</button>
                 </div>
             </div>
         </div>

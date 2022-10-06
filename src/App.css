@@ -216,4 +216,51 @@ a {
   color: #171717;
 }
 
+.cart__wraper h2 {
+  text-align: center;
+  width: fit-content;
+  margin: 1rem auto;
+  font-size: 2.5rem;
+}
+.cart__wraper .products__cart {
+  background-color: #505050;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 50vw;
+  border-radius: 25px;
+}
+.cart__wraper .products__cart h3 {
+  font-size: 1.5rem;
+  width: fit-content;
+  margin: 1rem auto;
+  font-weight: lighter;
+}
+.cart__wraper .products__cart .product__cart {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(115, 107, 95, 0.75);
+}
+.cart__wraper .products__cart .product__cart:first-child {
+  padding-bottom: 1rem;
+}
+.cart__wraper .products__cart .product__cart:not(:first-child) {
+  margin-top: 1rem;
+}
+.cart__wraper .products__cart .product__cart:last-child {
+  border: none;
+}
+.cart__wraper .products__cart .product__cart .product__img img {
+  width: 7vw;
+  border-radius: 12.5px;
+}
+.cart__wraper .products__cart .product__cart .product__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.35rem;
+}
+.cart__wraper .products__cart .product__cart .product__text > * {
+  width: 100%;
+}
+
 /*# sourceMappingURL=App.css.map */
