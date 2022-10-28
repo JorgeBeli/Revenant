@@ -1,20 +1,13 @@
 import { Link } from "react-router-dom"
 
-const ProductsCards = ({id,name,price,size,color,img}) =>{
+const ProductsCards = ({id,title,price,stock,img}) =>{
     return(
         <Link to={`./item/${id}`}>
             <div id={id} className='product__card'>
-                <div className="img__wraper">
-                    <img src={img} alt={name}></img>
-                </div>
-                <h2>{name}</h2>
+                <h2>{title}</h2>
+                <img src={img} alt={title}></img>
                 <p>${price}</p>
-                <div className="sizes__wraper">
-                    <p>Talles: {size.join(', ')}</p>
-                </div>
-                <div className="colors__wraper">
-                    <p>Colores: {color.join(', ')}</p>
-                </div>
+                <p>{stock}</p>
             </div>
         </Link>
     )

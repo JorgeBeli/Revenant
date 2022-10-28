@@ -1,13 +1,13 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Products from './components/Products';
 import Intro from './components/IntroIndex';
 import Location from './components/Location';
 import IndividualProduct from './components/ProductSolo';
 import Error from './components/error';
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart';
+import ListFirebase from './components/firebase/ListFirebase';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
             <Navbar/>
               <Routes>
                 <Route path='/' element={<Intro/>} />
-                <Route path='/products' element={<Products/>}/>
+                <Route path='/products' element={<ListFirebase/>}/>
                 <Route path='/products/item/:id' element={<IndividualProduct/>}></Route>
                 <Route path='/aboutUs' element={<Intro/>}></Route>
                 <Route path='/location' element={<Location/>}></Route>
