@@ -6,8 +6,8 @@ const ProductsCards = ({id,title,price,stock,img}) =>{
             <div id={id} className='product__card'>
                 <h2>{title}</h2>
                 <img src={img} alt={title}></img>
-                <p>${price}</p>
-                <p>{stock}</p>
+                <p>Price: ${price}</p>
+                <p>Stock: {stock}</p>
             </div>
         </Link>
     )

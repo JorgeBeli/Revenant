@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -171,7 +179,7 @@ a {
   text-align: right;
 }
 
-.individual__card {
+.individual__card .individual__product__cart {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: #505050;
@@ -181,27 +189,29 @@ a {
   margin: 2rem auto;
   padding: 1rem;
 }
-.individual__card .individual__img {
+.individual__card .individual__product__cart .individual__img {
   width: fit-content;
   margin: auto;
 }
-.individual__card .individual__img img {
+.individual__card .individual__product__cart .individual__img img {
   border-radius: 12.5px;
-  width: 100%;
+  width: 80%;
   height: 100%;
+  margin-left: 3rem;
 }
-.individual__card .individual__text {
+.individual__card .individual__product__cart .individual__text {
   display: grid;
   grid-template-rows: 1fr 2fr;
   text-align: center;
-  margin-top: 1rem;
+  border-left: 1px solid rgba(155, 155, 155, 0.3);
+  padding-top: 1rem;
 }
-.individual__card .individual__text .text__info {
+.individual__card .individual__product__cart .individual__text .text__info {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.individual__card .individual__text .text__info button {
+.individual__card .individual__product__cart .individual__text .text__info button {
   background-color: #202020;
   border: 1px solid #4b4b4b;
   width: fit-content;
@@ -210,7 +220,7 @@ a {
   margin: 0.5rem auto;
   transition: all 0.25s ease-in-out;
 }
-.individual__card .individual__text .text__info button:hover {
+.individual__card .individual__product__cart .individual__text .text__info button:hover {
   cursor: pointer;
   background-color: #9b9b9b;
   color: #171717;
@@ -261,6 +271,49 @@ a {
 }
 .cart__wraper .products__cart .product__cart .product__text > * {
   width: 100%;
+}
+
+.product__cart__wraper {
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  margin: 2rem auto;
+  gap: 3rem;
+}
+.product__cart__wraper .product__card {
+  background-color: #4b4b4b;
+  width: 12.5vw;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+.product__cart__wraper .product__card img {
+  height: 25vh;
+  width: 9vw;
+  background-color: #9b9b9b;
+  padding: 0.5rem;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.loading__icon::before {
+  animation: 1.5s linear infinite spinner;
+  animation-play-state: inherit;
+  border: solid 5px #4b4b4b;
+  border-bottom-color: #9b9b9b;
+  border-radius: 50%;
+  content: "";
+  height: 40px;
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 40px;
+  will-change: transform;
 }
 
 /*# sourceMappingURL=App.css.map */

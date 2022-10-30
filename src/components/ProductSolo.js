@@ -1,51 +1,33 @@
+import { collection, doc, getDoc, getFirestore } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { useProducts } from "../context/CartContext"
-import products from '../json/data.json'
+import IndividualProductCart from "./IndividualProductCart"
+import Loading from "./Loading"
 
 const IndividualProduct = () =>{
 
-    const { add } = useProducts()
-    
-    const {id : itemId} = useParams()
-    const [item, setItem] = useState({})
+    const { id } = useParams()
 
-    const addHandler = () =>{
-        add({...item})
-    }
-    
-    useEffect(() =>{
-        getDataProduct().then( res =>{
-            setItem(res)
-        })
+    const [product, setProduct] = useState()
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        getProduct()
     })
-    
-    const getDataProduct = () =>{
-        return new Promise((resolve) =>{
-            setTimeout(() =>{
-                resolve(products.find(item => item.id === JSON.parse(itemId)))
-            },1)
+
+    const getProduct = () => {
+        const db = getFirestore()
+        const productsCollection = collection(db, 'item')
+        const docRef = doc(productsCollection, id)
+        getDoc( docRef ).then(snapshot => {
+            setProduct(snapshot.data())
+            setLoading(false)
         })
     }
-
-    let {name, price, size, color, img} = {...item}
     
     return(
         <div className="individual__card">
-            <div className="individual__img">
-                <img src={img} alt={name}></img>
-            </div>
-            <div className="individual__text">
-                <div className="text__title">
-                    <h2>{name}</h2>
-                </div>
-                <div className="text__info">
-                    <p>${price}</p>
-                    <p>Sizes: {size?.join(', ')}</p>
-                    <p>Colors: {color?.join(', ')}</p>
-                    <button onClick={addHandler}>Add to Cart</button>
-                </div>
-            </div>
+            {loading? <Loading/> : <IndividualProductCart key={id} {...product}/>}
         </div>
     )
 }

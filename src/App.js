@@ -5,15 +5,15 @@ import Intro from './components/IntroIndex';
 import Location from './components/Location';
 import IndividualProduct from './components/ProductSolo';
 import Error from './components/error';
-import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart';
 import ListFirebase from './components/firebase/ListFirebase';
+import { CartContextProvider } from './components/CartContext';
 
 function App() {
   return (
     <>
       <header className='navbar__wraper'>
-        <CartProvider>
+        <CartContextProvider>
           <BrowserRouter>
             <Navbar/>
               <Routes>
@@ -27,7 +27,7 @@ function App() {
                 <Route path='*' element={<Error/>}></Route>
               </Routes>
           </BrowserRouter>
-        </CartProvider>
+        </CartContextProvider>
       </header>
       <main>
       </main>

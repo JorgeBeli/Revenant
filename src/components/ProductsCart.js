@@ -1,18 +1,11 @@
-const ProductsCart = ({id,img, name, price}) =>{
-    const quantityInput = document.getElementById('quantity')
-
-    const handleChange = () =>{
-        console.log(price * quantityInput?.value)
-    }
-
+const ProductsCart = ({ img, title, price, id}) =>{
     return(
-        <div className="product__cart">
+        <div className="product__cart" key={id}>
             <div className="product__img">
-                <img src={img} alt={name}></img>
+                <img src={img} alt={title}></img>
             </div>
             <div className="product__text">
-                <h4>{name}</h4>
-                <input onChange={handleChange} id="quantity" type='number'></input>
+                <h4>{title}</h4>
             </div>
             <div className="product__price">
                 <p>${price}</p>
