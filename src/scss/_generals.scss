@@ -474,3 +474,28 @@ a{
         }
     }
 }
+
+.gratefulness__container{
+    .gratefulness__text{
+        margin-top: 2rem;
+        p{
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 1rem;
+        }
+    }
+    a{
+        display: flex;
+        width: fit-content;
+        margin: 1rem auto;
+        p{
+            color: #696969;
+            font-size: 2rem;
+            width: fit-content;
+            transition: all .25s ease-in-out;
+            &:hover{
+                color: #bebebe;
+            }
+        }
+    }
+}

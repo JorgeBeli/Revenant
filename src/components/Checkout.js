@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { useCart } from "./CartContext"
 import ItemListContainer from "./ItemListContainer"
 
@@ -17,7 +18,7 @@ const Checkout = ( ) => {
                     <div className="checkoutDetail">
                         <h2>Enter your data to complete the purchase: </h2>
                     </div>
-                    <form className="checkoutForm">
+                    <form  onSubmit={ preventHandler } className="checkoutForm">
                         <label htmlFor="name"></label>
                         <input id="name" type="text" placeholder="Full name *" required></input>
                         
@@ -28,7 +29,7 @@ const Checkout = ( ) => {
                         <input id="adress" type="text" placeholder="Your adress *" required></input>
 
                         <label htmlFor="submit">
-                            <input onSubmit={ preventHandler } id="submit" type="submit" value="Purchase"></input>
+                            <Link to="/finish-checkout"><input id="submit" type="submit" value="Purchase"></input></Link>
                         </label>
                     </form>
                 </div>

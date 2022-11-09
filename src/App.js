@@ -9,6 +9,7 @@ import Cart from './components/Cart';
 import ListFirebase from './components/firebase/ListFirebase';
 import Checkout from './components/Checkout';
 import { CartContextProvider } from './components/CartContext';
+import FinishCheckout from './components/FinishCheckout';
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
                 <Route path='/location' element=  {<Location/>}></Route>
                 <Route path='/cart' element={<Cart/>} ></Route>
                 <Route path='/user' element={<Intro/>}></Route>
-                <Route path='/checkout' element=  {<Checkout/>}></Route>
+                <Route path='/checkout' element={<Checkout/>}></Route>
+                <Route path='/finish-checkout' element={<FinishCheckout/>}></Route>
                 <Route path='*' element={<Error/>}></ Route>
               </Routes>
           </BrowserRouter>

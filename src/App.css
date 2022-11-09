@@ -449,4 +449,27 @@ a {
   width: 100%;
 }
 
+.gratefulness__container .gratefulness__text {
+  margin-top: 2rem;
+}
+.gratefulness__container .gratefulness__text p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem;
+}
+.gratefulness__container a {
+  display: flex;
+  width: fit-content;
+  margin: 1rem auto;
+}
+.gratefulness__container a p {
+  color: #696969;
+  font-size: 2rem;
+  width: fit-content;
+  transition: all 0.25s ease-in-out;
+}
+.gratefulness__container a p:hover {
+  color: #bebebe;
+}
+
 /*# sourceMappingURL=App.css.map */
