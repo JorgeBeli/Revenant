@@ -3,7 +3,6 @@ const ProductsCart = ({ img, title, price, id, counter}) =>{
     const eliminateHandler = () => {
         
     }
-
     return(
         <div className="product__cart" key={ id }>
             <div className="product__img">
@@ -13,13 +12,13 @@ const ProductsCart = ({ img, title, price, id, counter}) =>{
                 <h4>{ title }</h4>
             </div>
             <div className="product__price">
-                <p>${ price }</p>
+                <p>${ (price).toLocaleString('en').replace(',','.') }</p>
             </div>
             <div>
                 <p>Quantity: { counter }</p>
             </div>
             <div>
-                Total: ${ price * counter }
+                Total: ${ (price * counter).toLocaleString('en').replace(',','.') }
             </div>
             <p onClick={ eliminateHandler }>
                 eliminar

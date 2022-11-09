@@ -337,4 +337,31 @@ a {
   will-change: transform;
 }
 
+.bottomCart__wraper .buttonCart__wraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottomCart__wraper .buttonCart__wraper button {
+  background-color: #202020;
+  border: 1px solid #4b4b4b;
+  width: fit-content;
+  margin: 1rem;
+  padding: 0.75rem;
+  border-radius: 12.5px;
+  transition: all 0.25s ease-in-out;
+}
+.bottomCart__wraper .buttonCart__wraper button:hover {
+  cursor: pointer;
+  background-color: #9b9b9b;
+  color: #171717;
+}
+.bottomCart__wraper .buttonCart__wraper :nth-child(3) {
+  width: 15vw;
+  margin-left: 0;
+}
+.bottomCart__wraper .buttonCart__wraper p {
+  margin-left: 10rem;
+}
+
 /*# sourceMappingURL=App.css.map */

@@ -359,3 +359,32 @@ a{
         will-change: transform;
     }
 }
+
+.bottomCart__wraper{
+    .buttonCart__wraper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button{
+            background-color: #202020;
+            border: 1px solid #4b4b4b;
+            width: fit-content;
+            margin: 1rem;
+            padding: .75rem;
+            border-radius: 12.5px;
+            transition: all .25s ease-in-out;
+            &:hover{
+                cursor: pointer;
+                background-color: #9b9b9b;
+                color: #171717;
+            }
+        }
+        :nth-child(3){
+            width: 15vw;
+            margin-left: 0;
+        }
+        p{
+            margin-left: 10rem;
+        }
+    }
+}
