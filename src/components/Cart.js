@@ -4,7 +4,7 @@ import ButtonTotalCart from "./ButtonTotalCart"
 
 const Cart = () =>{
 
-    const { products, clearCart } = useCart()
+    const { products } = useCart()
 
     return (
         <div className="cart__wraper">

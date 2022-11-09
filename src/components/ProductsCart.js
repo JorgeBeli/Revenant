@@ -8,21 +8,23 @@ const ProductsCart = ({ img, title, price, id, counter}) =>{
             <div className="product__img">
                 <img src={ img } alt={ title }></img>
             </div>
-            <div className="product__text">
-                <h4>{ title }</h4>
+            <div className="productCart__info">
+                <div className="product__text">
+                    <h4>{ title }</h4>
+                </div>
+                <div className="product__price">
+                    <p>$ { (price).toLocaleString('en'). replace(',','.') }</p>
+                </div>
+                <div>
+                    <p>Units: { counter }</p>
+                </div>
+                <div>
+                    Total: $ { (price * counter).toLocaleString('en').replace(',','. ') }
+                </div>
+                <p className="eliminateItemCart" onClick={ eliminateHandler }>
+                    Eliminate
+                </p>
             </div>
-            <div className="product__price">
-                <p>${ (price).toLocaleString('en').replace(',','.') }</p>
-            </div>
-            <div>
-                <p>Quantity: { counter }</p>
-            </div>
-            <div>
-                Total: ${ (price * counter).toLocaleString('en').replace(',','.') }
-            </div>
-            <p onClick={ eliminateHandler }>
-                eliminar
-            </p>
         </div>
     )
 }

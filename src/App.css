@@ -284,14 +284,28 @@ a {
   width: 7vw;
   border-radius: 12.5px;
 }
-.cart__wraper .products__cart .product__cart .product__text {
+.cart__wraper .products__cart .product__cart .productCart__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.cart__wraper .products__cart .product__cart .productCart__info .product__text {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2.35rem;
 }
-.cart__wraper .products__cart .product__cart .product__text > * {
+.cart__wraper .products__cart .product__cart .productCart__info .product__text > * {
   width: 100%;
+}
+.cart__wraper .products__cart .product__cart .productCart__info .eliminateItemCart {
+  color: #b61111;
+  transition: all 0.25s ease-in-out;
+}
+.cart__wraper .products__cart .product__cart .productCart__info .eliminateItemCart:hover {
+  cursor: pointer;
+  color: #ec1414;
 }
 
 .product__cart__wraper {
@@ -362,6 +376,77 @@ a {
 }
 .bottomCart__wraper .buttonCart__wraper p {
   margin-left: 10rem;
+}
+
+.checkout__wraper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(105, 105, 105, 0.3);
+  padding: 1rem;
+}
+.checkout__wraper .checkoutForm__container {
+  padding: 1rem;
+  border-right: 1px solid rgba(105, 105, 105, 0.3);
+}
+.checkout__wraper .checkoutForm__container .checkoutDetail {
+  text-align: center;
+}
+.checkout__wraper .checkoutForm__container .checkoutForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.checkout__wraper .checkoutForm__container .checkoutForm input {
+  width: 55%;
+  height: 2rem;
+  color: rgb(209, 209, 209);
+  background-color: #4b4b4b;
+  border: 1px solid #696969;
+  padding: 0.5rem;
+  border-radius: 15px;
+}
+.checkout__wraper .checkoutForm__container .checkoutForm input:focus {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #bebebe;
+}
+.checkout__wraper .checkoutForm__container .checkoutForm :nth-child(7) {
+  margin-top: 1rem;
+}
+.checkout__wraper .checkoutForm__container .checkoutForm :nth-child(7) input {
+  width: 115%;
+  transition: all 0.25s ease-in-out;
+  height: 100%;
+  background-color: #797979;
+}
+.checkout__wraper .checkoutForm__container .checkoutForm :nth-child(7) input:hover {
+  cursor: pointer;
+  background-color: #9b9b9b;
+  color: #171717;
+}
+.checkout__wraper .checkoutInformation__wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.checkout__wraper .checkoutInformation__wraper .checkoutDetail__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 2rem;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(105, 105, 105, 0.3);
+  padding-bottom: 1rem;
+}
+.checkout__wraper .checkoutInformation__wraper .checkoutDetail__container > * {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 /*# sourceMappingURL=App.css.map */
