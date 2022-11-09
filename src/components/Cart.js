@@ -1,4 +1,4 @@
-import { CartContextProvider, useCart } from "./CartContext"
+import { useCart } from "./CartContext"
 import ProductsCart from "./ProductsCart"
 import Swal from "sweetalert2"
 
@@ -17,10 +17,7 @@ const CreateOrder = () =>{
 
 const Cart = () =>{
 
-    const {products, clearCart} = useCart()
-
-
-
+    const { products, clearCart } = useCart()
 
     const clearHandler = () =>{
         clearCart([])
@@ -28,7 +25,7 @@ const Cart = () =>{
             title: 'Cart cleared',
             icon: 'success',
             toast: true,
-            position: "top-end",
+            position: "bottom-end",
             timer: 2000,
             timerProgressBar: true,
             showConfirmButton: false

@@ -8,10 +8,10 @@ const CartContext = createContext({
 })
 
 const useCart = () =>{
-    return useContext(CartContext) 
+    return useContext( CartContext ) 
 }
 
-const CartContextProvider = ( {children} ) => {
+const CartContextProvider = ( { children } ) => {
     
     const [products, setProducts] = useState([])
 
