@@ -4,10 +4,10 @@ import ItemListContainer from "./ItemListContainer"
 
 const Checkout = ( ) => {
 
-    const { products } = useCart()
+    const { products, clearCart } = useCart()
 
-    const preventHandler = (e) => {
-        e.preventDefault()
+    const clearCartHandler = () => {
+        clearCart([])
     }
 
     return(
@@ -18,7 +18,7 @@ const Checkout = ( ) => {
                     <div className="checkoutDetail">
                         <h2>Enter your data to complete the purchase: </h2>
                     </div>
-                    <form  onSubmit={ preventHandler } className="checkoutForm">
+                    <form className="checkoutForm">
                         <label htmlFor="name"></label>
                         <input id="name" type="text" placeholder="Full name *" required></input>
                         
@@ -29,7 +29,7 @@ const Checkout = ( ) => {
                         <input id="adress" type="text" placeholder="Your adress *" required></input>
 
                         <label htmlFor="submit">
-                            <Link to="/finish-checkout"><input id="submit" type="submit" value="Purchase"></input></Link>
+                            <Link to="/finish-checkout"><input onClick={ clearCartHandler } id="submit" type="submit" value="Purchase"></input></Link>
                         </label>
                     </form>
                 </div>
@@ -39,6 +39,10 @@ const Checkout = ( ) => {
                         <div>
                             <p>Total items: </p>
                             <p>{ products.reduce((total, item) => total + item.counter, 0) }</p>
+                        </div>
+                        <div>
+                            <p>Items cost: </p>
+                            <p>$ { products.reduce((total, item) => total + (item.price * item.counter),0) }</p>
                         </div>
                         <div>
                             <p>Shipping cost: </p>
