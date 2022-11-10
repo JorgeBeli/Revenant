@@ -5,12 +5,15 @@ import Swal from "sweetalert2"
 
 const IndividualProductCart = ({ title, price, img, stock }) => {
 
-    const { addToCart } = useCart()
+    const { products, addToCart } = useCart()
     const { id } = useParams()
     const [ counter, setCounter ] = useState( 0 )
 
-    const addHandler = () => {
-        addToCart({ title, price, img, id, counter })
+    const isInCart = ( id ) => {
+        return( products.some( (item) => item.id === id ))
+    }
+
+    const addHandler = (  ) => {
         Swal.fire({
             title: 'Product added',
             icon: 'success',
@@ -20,6 +23,13 @@ const IndividualProductCart = ({ title, price, img, stock }) => {
             timerProgressBar: true,
             showConfirmButton: false
         })
+        if(isInCart( id )){
+            const itemFound = products.find( item => item.id === id )
+            itemFound.counter += counter
+        }
+        if(!isInCart( id )){
+            addToCart({ title, price, img, id, counter })
+        }
     }
 
     const restCounterHandler = () => {
